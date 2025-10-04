@@ -1,15 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ROCKY HANDSOM</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rocky Handsom</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello World 👋</h1>
-  <p>This is my first site built from scratch!</p>
-  <button onclick="sayHi()">Click Me</button>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">ROCKY HANDSOM</a>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="nav" class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+        <a href="#shop">Shop</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <h1>Rocky Handsom</h1>
+        <p class="tag">Learning web dev, building stuff, finding bugs, and fixing them.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#blog">Read Blog</a>
+          <a class="btn ghost" href="#shop">Visit Shop</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p>I'm building this site to learn how websites are made — frontend, backend, deployment, and security. Everything here is a playground to learn and improve.</p>
+      </div>
+    </section>
+
+    <section id="blog" class="section alt">
+      <div class="container">
+        <h2>Latest Posts</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>My first deployment</h3>
+            <p>How I deployed this site on GitHub Pages and why it matters.</p>
+            <a class="small-link" href="#">Read →</a>
+          </article>
+          <article class="card">
+            <h3>Learning HTML & CSS</h3>
+            <p>Basics that every hacker should know to spot injection bugs and DOM issues.</p>
+            <a class="small-link" href="#">Read →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="container">
+        <h2>Shop (demo)</h2>
+        <p>This is a demo shop section. Later we'll connect payments and a backend in test mode.</p>
+        <div class="shop-grid">
+          <div class="product">
+            <div class="pimg">📦</div>
+            <strong>Demo Item</strong>
+            <p class="muted">₹0.00 — Demo</p>
+            <button class="btn small" onclick="alert('Demo checkout (no payment)')">Buy (Demo)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Questions, feedback, or bug ideas? Drop a message (demo):</p>
+        <form id="contactForm" class="contact-form" onsubmit="submitContact(event)">
+          <input type="text" id="name" placeholder="Your name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <textarea id="message" placeholder="Message" rows="4" required></textarea>
+          <button class="btn" type="submit">Send (demo)</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Rocky Handsom — Learning by building.</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
